@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Marschner, Francis J.</origin>
+				<origin>Anderson, James R.</origin>
+				<pubdate>1967</pubdate>
+				<title>Major land uses in the United States</title>
+				<edition>1.0</edition>
+				<geoform>map</geoform>
+				<pubinfo>
+					<pubplace>Reston, VA</pubplace>
+					<publish>U.S. Geological Survey</publish>
+				</pubinfo>
+				<onlink>http://water.usgs.gov/lookup/getspatial?na70_landuse</onlink>
+				<lworkcit>
+					<citeinfo>
+						<origin>U.S. Geological Survey</origin>
+						<pubdate>1970</pubdate>
+						<title>The national atlas of the United States of America</title>
+						<pubinfo>
+							<pubplace>Washington, DC</pubplace>
+							<publish>U.S. Geological Survey</publish>
+						</pubinfo>
+					</citeinfo>
+				</lworkcit>
+			</citeinfo>
+		</citation>
+		<descript>
+			<abstract>
+
+This is a polygon coverage of major land uses in the United
+States.  The source of the coverage is the map of major land
+uses in the National Atlas, pages 158-159, which was adapted
+from U.S.  Department of Agriculture, "Major Land Uses in the
+United States," by Francis J. Marschner, revised by James
+R. Anderson, 1967.
+</abstract>
+			<purpose>
+
+The intended use of this coverage is in the state sections of
+the 1990-91 National Water Summary on surface-water quality.
+Each state report will contain a map of the state's major land
+uses and, if possible, will discuss the influence of land use on
+water quality in the state.
+</purpose>
+			<supplinf>
+
+The coverage contains one polygon attribute, LUC (land use
+code).  LUC is derived from the categories of land use listed in
+the National Atlas plus a category for open water. The codes are:
+
+1 = Mostly cropland;
+2 = Cropland with grazing land;
+3 = Cropland with pasture, woodland, and forest;
+4 = Irrigated land;
+5 = Woodland and forest with some cropland and pasture;
+6 = Forest and woodland mostly grazed;
+7 = Forest and woodland mostly ungrazed;
+8 = Subhumid grassland and semiarid grazing land;
+9 = Open woodland grazed (pinon, juniper, aspen groves,
+chaparral and brush);
+10 = Desert shrubland grazed;
+11 = Desert shrubland mostly ungrazed;
+12 = Alpine meadows, mountain peaks above timber line,
+sparse dry tundra, lava flows, and barren land;
+13 = Swamp;
+14 = Marshland;
+15 = Moist tundra and muskeg;
+16 = Urban areas;
+17 = Open water;
+99 = Great Lakes, Canada.
+
+(The SYMBOL attribute was used for plotting.)
+
+The coverage contains one arc attribute, KEEP.  This is a flag
+for plotting the arc or not.  The area of some polygons exceeded
+the limit for hardware fill on the Versatec plotter, so arcs
+were added to divide the polygons into smaller ones.  The arcs
+that divide up the large polygons are not plotted as the
+boundaries of land use categories.
+
+The arc codes are: 0 = Divides a large polygon (is not to be plotted);
+1 = Land use boundary;
+2 = Coastline or island boundary.
+
+There are separate coverages for Alaska and Hawaii.
+</supplinf>
+		</descript>
+		<timeperd>
+			<timeinfo>
+				<rngdates>
+					<begdate>1967</begdate>
+					<enddate>1970</enddate>
+				</rngdates>
+			</timeinfo>
+			<current>Historical land use information</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>None planned</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-127.871468</westbc>
+				<eastbc>-65.405602</eastbc>
+				<northbc>51.552484</northbc>
+				<southbc>23.248364</southbc>
+			</bounding>
+		</spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>Land use</themekey>
+				<themekey>inlandWaters</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+				<placekey>Conterminous United States</placekey>
+			</place>
+		</keywords>
+		<accconst>none</accconst>
+		<useconst>
+
+The scale of the data (1:7,500,000) limits its use to
+broad overviews of land use.
+
+Several areas on the scanned map did not register properly with
+existing 1:2,000,000 base maps.  The areas are southwest New
+Mexico to southwest California and the northwest corner of Maine.
+The original ticks appear to be located properly.  The discrepancy
+might be due to different source maps or error in transforming the
+scanned copy.
+</useconst>
+		<native>
+Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI
+ArcCatalog 9.0.0535.
+</native>
+		<crossref>
+			<citeinfo>
+				<origin>Paulson, R.W.</origin>
+				<origin>Chase, E.B.</origin>
+				<origin>Williams, J.S.</origin>
+				<origin>Moody, D.W.</origin>
+				<pubdate>1993</pubdate>
+				<title>National water summary 1990-91:  Hydrologic events and stream water quality</title>
+				<edition>1</edition>
+				<serinfo>
+					<sername>U.S. Geological Survey Water-Supply Paper</sername>
+					<issue>2400</issue>
+				</serinfo>
+			</citeinfo>
+		</crossref>
+	</idinfo>
+	<dataqual>
+		<logic>Logical consistency tests are described in the Process Step dated 1990.</logic>
+		<complete>The data spans the conterminous United States.</complete>
+		<lineage>
+			<procstep>
+				<procdesc>
+
+The coverage was created from the National Atlas plate by Kerie Hitt,
+USGS National Water Summary.
+
+Jack Wittmann from NMD supplied a clear plastic overlay of the
+linework for the National Atlas plate.  The plastic overlay
+was scanned on the TEK 4991 drum scanner in the Reston GIS
+lab.  The parameters on the scanner were:
+
+Units = metric;
+Reflectance = 55%;
+Background = light;
+Void size = 1 pixel;
+Dot size = 5 x 5 pixels;
+Smoothing = disabled;
+Growing layers = 0;
+Thinning layers = 2;
+Vectorizing tolerance = 0.100;
+Short vector length = 0.000;
+Short vector tolerance = 0.100.
+
+The resulting TDA file was uploaded to the Prime and was
+coverted to an ARC/INFO coverage (LANDUSE1) using Ken
+Lanfear's TEKSCAN.AML.  The rest of the processing was
+accomplished with ARC/INFO.
+
+LANDUSE1 was ARCEDITED, and Alaska, Hawaii, pie charts,
+explanation, and other extraneous pieces were removed.  The
+original tics were deleted and 13 new tics at the locations of
+latitude/longitude drawn on the plastic were added.  The
+coverage was saved to LANDUSE2.
+
+A file (US.LL.TICKS) listing the latitude/longitude of the 13
+known locations on the map was projected from Geographic to
+Albers (US.ALB.TICKS).
+
+An empty coverage called LANDUSE5 was created using the TIC
+file of LANDUSE2.  The XTIC and YTIC values of LANDUSE5 were
+updated to match the Albers coordinates in US.ALB.TICKS.
+
+The coverage was transformed into real world coordinates
+(see log below).
+
+TRANSFORM LANDUSE2 LANDUSE5
+Transforming coordinates for coverage LANDUSE2
+
+Scale (X,Y) = (7494.289,7506.062)
+Translation = (-2690169.317,-234854.159)
+Rotation (degrees) = (0.060)
+RMS Error (input,output) = (0.075,559.951)
+
+tic   input  x    input  y
+id    output x    output y            x error     y error
+--- ---------------- ---------------- ----------- -----------
+01      175.728      448.880
+-1376571.000  3135814.000            -167.536  105.741
+04      466.301      436.361
+800505.875  3044125.000             492.771  224.574
+05      649.293      321.795
+2172901.000  2186024.000             391.808  -97.096
+06      669.366      249.960
+2324251.000  1646694.000              37.967  197.569
+08      576.165       78.041
+1627249.000   355418.500             -90.194  268.423
+09      372.580       59.998
+102183.297   218647.781            -601.385  -70.883
+12       36.876      332.119
+-2416211.000  2258465.000            -209.907 -109.442
+02      271.951      434.498
+-655443.500  3028804.000             -59.102  -41.203
+03      369.080      430.334
+72934.656  2998128.000            -496.067  176.869
+07      643.081       90.999
+2128467.000   454241.500              84.084 -732.892
+10      304.459       61.210
+-408619.938   226711.000             -330.653 394.218
+11       53.917      172.453
+-2288723.000  1059890.000             1270.597 139.988
+13       59.335      403.047
+-2248343.000  2791387.000             -322.382-455.865
+
+The dangling arcs were removed by CLEANING and ARCEDITING.
+Spiderwebbing along the coastline was removed by ARCEDITING.
+After polygon topology was built, interior polygons having
+small areas were checked and the ones that were not part of
+the land use categories were removed.
+
+The linework on the plastic overlay that was scanned did not
+always agree with the published land use map.  In such cases,
+the linework of the published map was used instead of the scan
+copy.
+
+After the linework was checked, the polygons were tagged using
+ARCEDIT.
+</procdesc>
+				<procdate>1990</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>
+Dick Paulson checked color plots of all states except Alaska
+and Hawaii.
+
+The dataset was reviewed on a state-by-state basis when state
+maps of the data were published in the state summaries in the
+1990-91 National Water Summary report (U.S. Geological
+Survey, 1993).  The dataset was used in most of the State
+Summaries of that report.
+</procdesc>
+				<procdate>1991</procdate>
+			</procstep>
+			<procstep>
+				<procdesc>
+The dataset had been deleted from the spatial library by mistake.
+
+Imported an archival copy in SDTS format.  Projected from Geographic
+to Albers.  Also made a non-propriety shapefile.
+
+Put the coverage metadata into FGDC-compliant form.
+
+Put all back into the spatial data library.   --Kerie Hitt, USGS
+</procdesc>
+				<procdate>200703</procdate>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Metadata imported.</procdesc><srcused Sync="TRUE">C:\DOCUME~1\kjhitt\LOCALS~1\Temp\xml550.tmp</srcused><date Sync="TRUE">20070305</date><time Sync="TRUE">17172300</time></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct>vector</direct>
+		<ptvctinf>
+			<sdtsterm>
+				<sdtstype>Complete chain</sdtstype>
+				<ptvctcnt>12721</ptvctcnt>
+			</sdtsterm>
+			<sdtsterm>
+				<sdtstype>Label point</sdtstype>
+				<ptvctcnt>4351</ptvctcnt>
+			</sdtsterm>
+			<sdtsterm>
+				<sdtstype>GT-polygon composed of chains</sdtstype>
+				<ptvctcnt>4350</ptvctcnt>
+			</sdtsterm>
+			<sdtsterm>
+				<sdtstype>Point</sdtstype>
+				<ptvctcnt>13</ptvctcnt>
+			</sdtsterm>
+		</ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<mapproj>
+					<mapprojn>Albers Conical Equal Area</mapprojn>
+					<albers>
+						<stdparll>29.500000</stdparll>
+						<stdparll>45.500000</stdparll>
+						<longcm>-96.000000</longcm>
+						<latprjo>23.000000</latprjo>
+						<feast>0.000000</feast>
+						<fnorth>0.000000</fnorth>
+					</albers>
+				</mapproj>
+				<planci>
+					<plance>coordinate pair</plance>
+					<coordrep>
+						<absres>0.008192</absres>
+						<ordres>0.008192</ordres>
+					</coordrep>
+					<plandu>meters</plandu>
+				</planci>
+			</planar>
+			<geodetic>
+				<horizdn>North American Datum of 1983</horizdn>
+				<ellips>Geodetic Reference System 80</ellips>
+				<semiaxis>6378137.000000</semiaxis>
+				<denflat>298.257222</denflat>
+			</geodetic>
+		</horizsys>
+	</spref>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>U.S. Geological Survey</cntorg>
+				</cntorgp>
+				<cntpos>Ask USGS -- Water Webserver Team</cntpos>
+				<cntaddr>
+					<addrtype>mailing</addrtype>
+					<address>507 National Center</address>
+					<city>Reston</city>
+					<state>VA</state>
+					<postal>20192</postal>
+				</cntaddr>
+				<cntvoice>1-888-275-8747 (1-888-ASK-USGS)</cntvoice>
+				<cntemail>http://answers.usgs.gov/cgi-bin/gsanswers?pemail=h2oteam&amp;subject=GIS+Dataset+na70_landuse</cntemail>
+			</cntinfo>
+		</distrib>
+		<distliab>
+
+Although this data set has been used by the U.S. Geological Survey,
+U.S. Department of the Interior, no warranty expressed or implied
+is made by the U.S. Geological Survey as to the accuracy of the
+data and related materials. The act of distribution shall not
+constitute any such warranty, and no responsibility is assumed by
+the U.S. Geological Survey in the use of this data, software, or
+related materials.
+
+Any use of trade, product, or firm names is for descriptive
+purposes only and does not imply endorsement by the U.S.
+Government.
+</distliab>
+		<stdorder>
+			<digform>
+				<digtinfo>
+					<formname>ArcInfo Workstation Coverage</formname>
+					<filedec>gzip -d; gunzip</filedec>
+					<transize>1710000 bytes</transize>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://water.usgs.gov/GIS/dsdl/na70_landuse.tgz</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<digform>
+				<digtinfo>
+					<formname>ArcInfo Shapefile</formname>
+					<filedec>gzip -d; gunzip</filedec>
+					<transize>1610000 bytes</transize>
+				</digtinfo>
+				<digtopt>
+					<onlinopt>
+						<computer>
+							<networka>
+								<networkr>http://water.usgs.gov/GIS/dsdl/na70_landuse.tar.gz</networkr>
+							</networka>
+						</computer>
+					</onlinopt>
+				</digtopt>
+			</digform>
+			<fees>None.  This data set is provided by USGS as a public service.</fees>
+		</stdorder>
+	</distinfo>
+	<metainfo>
+		<metd>200703</metd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+					<cntorg>U.S. Geological Survey</cntorg>
+				</cntorgp>
+				<cntpos>Ask USGS -- Water Webserver Team</cntpos>
+				<cntaddr>
+					<addrtype>mailing</addrtype>
+					<address>507 National Center</address>
+					<city>Reston</city>
+					<state>VA</state>
+					<postal>20192</postal>
+				</cntaddr>
+				<cntvoice>1-888-275-8747 (1-888-ASK-USGS)</cntvoice>
+				<cntemail>http://water.usgs.gov/user_feedback_form.html</cntemail>
+			</cntinfo>
+		</metc>
+		<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv>FGDC-STD-001-1998</metstdv>
+	</metainfo>
+	<Esri><MetaID>{5131F3FC-6904-40E8-9963-0DE6EE19269A}</MetaID><CreaDate>20070305</CreaDate><CreaTime>17172300</CreaTime><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process Name="DefineProjection_1" ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DefineProjection" Date="20070308" Time="144156">DefineProjection D:\TEMP\landuse\na70_lushp.shp PROJCS['NAD_1983_Albers',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Albers'],PARAMETER['False_Easting',0.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-96.0],PARAMETER['Standard_Parallel_1',29.5],PARAMETER['Standard_Parallel_2',45.5],PARAMETER['Latitude_Of_Origin',23.0],UNIT['Meter',1.0]] D:\TEMP\landuse\na70_lushp.shp</Process></lineage></DataProperties></Esri></metadata>
