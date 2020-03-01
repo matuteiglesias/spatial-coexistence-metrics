@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset='utf-8' />
+      <title>Display a map</title>
+      <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+      <style>
+         body { margin:0; padding:0; }
+         h2,
+         h3 {margin: 10px;font-size: 1.2em;}
+         h3 {font-size: 1em;}
+         p {font-size: 0.85em; margin: 10px; text-align: left; }
+         #map { position:absolute; top:0; bottom:0; width:100%; }
+         .map-overlay {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         background: rgba(255, 255, 255, 0.8);
+         margin-right: 20px;
+         font-family: Arial, sans-serif;
+         overflow: auto;
+         border-radius: 3px;
+         }
+         #features {
+         position: absolute;
+         top: 0;
+         height: 350px;
+         margin-top: 20px;
+         width: 400px;
+         }
+      </style>
+   </head>
+   <body>
+      <div id='map'></div>
+      <div class='map-overlay' id='features'>
+         <h2>US employment by county (BLS)</h2>
+         <div id='pd'>
+            <p>Hover over a county to see largest RCA > 1 NAICS 4</p>
+         </div>
+      </div>
+      <div class='map-overlay' id='legend'></div>
+      <script>
+         mapboxgl.accessToken = 'pk.eyJ1IjoibWF0dXRlaWdsZXNpYXMiLCJhIjoiY2ptdGN1bjViMDY4MzNxcDEyMXQ4ejU4bCJ9.wOgfXtbyetTot1CZN8D6Hg';
+         var map = new mapboxgl.Map({
+           container: 'map',
+           style: 'mapbox://styles/matuteiglesias/ck0y6gxst04h41cqt8yxdd7oc',
+           center: [-79.762491, 39.859114],
+           zoom: 3.8
+         }); 
+         
+         map.getCanvas().style.cursor = 'default';
+         
+         //         map.fitBounds([[-133.2421875, 16.972741], [-47.63671875, 52.696361]]);
+         
+         map.on('mousemove', function(e) {
+         var counties = map.queryRenderedFeatures(e.point, {
+         layers: ['counties']
+         });
+         
+         var layers = ['0-10', '10-20', '20-50', '50-100', '100-200', '200-500', '500-1000', '1000+'];
+         var colors = ['#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C', '#FC4E2A', '#E31A1C', '#BD0026', '#800026'];
+         
+         if (counties.length > 0) {
+         
+         var propValue;
+         for(var propName in counties[0]) {
+         propValue = counties[0][propName]
+         console.log(propName,propValue);
+         }
+         
+         document.getElementById('pd').innerHTML = 
+         '<h3><strong>' + counties[0].properties.NAME + '</strong></h3><p><strong><em>' 
+         + counties[0].properties.annual_avg_estabs + '</strong> establishments </em></p><p><strong><em>' 
+         + counties[0].properties.annual_avg_emplvl + '</strong> employment </em></p><p><strong><em>' 
+         + counties[0].properties['A'] + '</strong> employment </em></p><p><strong><em>' 
+         + counties[0].properties['B'] + '</strong> employment </em></p><p><strong><em>' 
+         + counties[0].properties['C'] + '</strong> employment </em></p><p><strong><em>' 
+         + counties[0].properties['D'] + '</strong> employment </em></p><p><strong><em>' 
+         + counties[0].properties['E'] +'</strong></em></p>';
+         } else {
+         document.getElementById('pd').innerHTML = '<p>Hover over a county to see largest RCA > 1 NAICS 4</p>';
+         }
+         });
+      </script>
+   </body>
+</html>
+
+
